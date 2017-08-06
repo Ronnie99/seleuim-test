@@ -1,0 +1,19 @@
+{
+  "name": "day01",
+  "version": "1.0.0",
+  "description": "第一天练习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ronnie99/seleuim-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ronnie99/seleuim-test/issues"
+  },
+  "homepage": "https://github.com/Ronnie99/seleuim-test#readme"
+}
