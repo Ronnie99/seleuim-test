@@ -1,8 +1,7 @@
 require("chromedriver");
 var webdriver=require('selenium-webdriver');
-let driver =new webdriver.Builder().forBrowser("chrome").build();
-
 let By =webdriver.By;
+let driver =new webdriver.Builder().forBrowser("chrome").build();
 driver.get('http://www.baidu.com');
 driver.findElement({id:'kw'}).sendKeys('上海地图');//搜索上海地图
 driver.findElement(By.id('su')).click();
