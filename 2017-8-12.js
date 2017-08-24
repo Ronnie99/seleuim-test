@@ -12,10 +12,24 @@ driver.sleep(5000);
 driver.getAllWindowHandles().then(function(allwindows){   
     driver.switchTo().window(allwindows[1]).then(function(){ 
         driver.findElement(By.id('sole-input')).sendKeys('御桥')
-        eriver.findElement(By.id('search-button')).click();
+        driver.findElement(By.id('search-button')).click();
         driver.sleep(3000);
-        driver.findElement(By.css('#card-1 > div > ul > li.search-item.bus-stop-item > div.cf')).click();
-        driver.findElement(By.xpath('//*[@id="route-go"]/span[2]')).click();
+        driver.findElement(By.xpath('//*[@id="card-1"]/div/ul/li[1]/div[1]/div[2]/div[2]')).click();
+        driver.sleep(3000);
+        driver.findElement(By.css('#route-go')).click();
+        driver.findElement(By.className('route-start-input')).sendKeys('来安路685');
+        driver.sleep(2000);
+        driver.findElement(By.xpath('//*[@id="ui3-suggest-scroll"]/ul/li[6]')).click();
+        driver.sleep(2000);
+        driver.findElement(By.id('search-button')).click();
+        driver.sleep(2000);
+        driver.findElement(By.xpath('//*[@id="card-4"]/div[2]/div[1]/span')).click();
+        driver.switchTo().frame('wHistory').then(function(){
+            driver.sleep(5000);
+            driver.findElement(By.id('message_login')).click();
+            //driver.findElement(By.xpath('//*[@id="message_phone_number"]')).click();
+            //driver.findElement(By.id('message_phone_number')).sendKeys('18939726078')
+        })
     })
 })
 
