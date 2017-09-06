@@ -10,8 +10,8 @@ driver.manage().window().maximize();
 var gengduo=driver.findElement({name:'tj_briicon'});
 driver.actions().mouseMove(gengduo).perform();
 driver.takeScreenshot().then(function(imagedata){    // 截图
-    fs.writeFileSync('baidu.png',imagedata,'base64')
+    fs.writeFileSync('baid.png',imagedata,'base64')
 })
-driver.findElement(By.className('soutu-btn')).click();
-let pngpath = path.join(__dirname,'baidu.png');
-driver.findElement(By.className('upload-pic')).sendKeys(pngpath)  // 上传文件
+//driver.findElement(By.className('soutu-btn')).click();
+//let pngpath = path.join(__dirname,'baidu.png');
+//driver.findElement(By.className('upload-pic')).sendKeys(pngpath)  // 上传文件

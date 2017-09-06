@@ -18,10 +18,10 @@ driver.manage().window().maximize();
 driver.actions().mouseMove(driver.findElement(By.name('tj_briicon'))).perform();
 driver.findElement(By.name('tj_mp3')).click();
 driver.sleep(3000);
-driver.navigate().refresh();
+driver.navigate().refresh();//刷新
 driver.sleep(3000);
-driver.navigate().back();
-driver.navigate().forward();
-driver.close();
+driver.navigate().back();//后退
+driver.navigate().forward();//前进
+driver.close();//关闭当前页
 driver.sleep(2000);
-driver.quit();
+driver.quit();//退出浏览器
